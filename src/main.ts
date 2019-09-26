@@ -10,9 +10,9 @@ console.log(`BUILD: ${process.env.NODE_ENV} | RUNTIME: ${process.env.RUNTIME_ENV
 
 configure({
   //we want to break dev build if reaction throws
-  disableErrorBoundaries: isDevBuild,
+  disableErrorBoundaries: isDevBuild
   // we don't want to break prod by accidentally modifying observable out of action context
-  enforceActions: isDevBuild ? 'observed' : 'never'
+  //  enforceActions: isDevBuild ? 'observed' : 'never'
 });
 
 ReactDOM.render(React.createElement(Root), document.getElementById('root'));
